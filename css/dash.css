@@ -140,6 +140,7 @@ aside ul li {
     z-index: 0;
     margin: 5px 0;
     font-size: 15px;
+    cursor: pointer;
 }
 
 aside ul>li:first-child:before {
@@ -173,6 +174,10 @@ aside ul li i {
 
 aside ul li a {
     text-decoration: none;
+}
+
+aside ul li a:visited {
+    color: black;
 }
 
 @media (max-width:767px) {
