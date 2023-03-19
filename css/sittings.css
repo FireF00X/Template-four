@@ -78,6 +78,59 @@ ul {
     background-color: #0d69d5;
 }
 
+.butt {
+    position: relative;
+    display: inline-block;
+    width: 70px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.butt input {
+    display: none;
+}
+
+.butt .slider {
+    display: inline-block;
+    background-color: #ccc;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 50px;
+}
+
+.butt .slider::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f057";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: white;
+    color: #ccc;
+    font-size: 26px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    left: 3px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: .4s;
+}
+
+.butt input:checked+.slider::before {
+    background-color: white;
+    left: 43px;
+    content: "\f058";
+    color: #0075ff;
+}
+
+.butt input:checked+.slider {
+    background-color: #0075ff;
+}
+
 /* finsh global rules */
 .ahmed {
     display: grid;
@@ -264,3 +317,349 @@ nav .container-two .login img {
 }
 
 /* end search */
+/* start body */
+.body {
+    padding: 20px;
+}
+
+.body h1 {
+    margin-top: 0;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.body h1::after {
+    content: "";
+    position: absolute;
+    width: 20%;
+    height: 4px;
+    background: linear-gradient(to right, black 0% 30%, white 30% 100%);
+    bottom: 0;
+    left: 0;
+}
+
+.body .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    gap: 20px;
+}
+
+.body .cards>div {
+    background-color: white;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+/* start one */
+.body .one {
+    padding: 20px;
+}
+
+
+.body .one .top h2 {
+    margin-bottom: 10px;
+}
+
+.body .one .top p {
+    color: var(--p-color);
+}
+
+.body .one .mid {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.body .one .mid .txt h3 {
+    margin-bottom: 10px;
+}
+
+.body .one .mid .txt p {
+    color: var(--p-color);
+    font-size: 14px;
+}
+
+.body .one textarea {
+    width: 100%;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    color: var(--p-color);
+}
+
+/* end one */
+/* start two */
+.two {
+    padding: 20px;
+}
+
+.two h2 {
+    margin-bottom: 10px;
+}
+
+.two p {
+    color: var(--p-color);
+}
+
+.two form ul {
+    margin-top: 20px;
+}
+
+.two form ul li {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.two form ul li label {
+    margin-bottom: 10px;
+    color: var(--p-color);
+    font-size: 15px;
+}
+
+.two form ul li input {
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #eee;
+    margin: 0;
+    outline: none;
+    font-size: 14px;
+}
+
+.two form ul li:last-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.two form ul li:last-child span {
+    display: flex;
+    width: 85%;
+    flex-direction: column;
+    margin-right: auto;
+}
+
+.two form ul li:last-child span input {
+    background-color: #f0f4f8;
+}
+
+.two form ul li button {
+    width: 10%;
+    margin: auto auto 0;
+    padding-bottom: 10px;
+    background-color: white;
+    color: #0075ff;
+    border: none;
+    font-size: 21px;
+}
+
+/* end two */
+/* start three */
+.three {
+    padding: 20px;
+}
+
+.three h2 {
+    margin-bottom: 10px;
+}
+
+.three p {
+    color: var(--p-color);
+}
+
+.three .row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.three .row .text h4 {
+    margin-bottom: 10px;
+}
+
+.three .row:nth-child(4)>.butt {
+    margin-left: auto;
+}
+
+.three .row:not(:last-child) {
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.three .row:last-child {
+    padding-top: 20px;
+}
+
+.three .row:last-child button {
+    background-color: #eee;
+    color: black;
+    font-weight: normal;
+}
+
+.three .row button {
+    margin-left: auto;
+    padding: 5px 10px;
+    border: none;
+    outline: none;
+    color: white;
+    background: var(--butt-color);
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 15px;
+    display: block;
+}
+
+/* end three */
+/* start four */
+.four {
+    padding: 20px;
+}
+
+.four h2 {
+    margin-bottom: 10px;
+}
+
+.four p {
+    color: var(--p-color);
+    margin-bottom: 20px;
+}
+
+.four .row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.four .row span {
+    width: 20px;
+    height: 20px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #eee;
+    border-right: 1px solid #ccc;
+}
+
+.four .row span i {
+    color: var(--p-color);
+    font-size: 18px;
+}
+
+.four .row input {
+    width: 100%;
+    background-color: #eee;
+    border: none;
+    padding: 10px;
+    outline: none;
+    font-size: 13px;
+}
+
+.four .row:hover span i {
+    color: black;
+}
+
+/* end four */
+/* start five */
+.five {
+    padding: 20px;
+}
+
+.five h2 {
+    margin-bottom: 10px;
+}
+
+.five p {
+    color: var(--p-color);
+}
+
+.five form ul li {
+    padding: 20px 0;
+}
+
+.five form ul li input {
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+}
+
+.five form ul li label {
+    font-size: 18px;
+}
+
+/* end five */
+/* start six */
+.six {
+    padding: 20px;
+}
+
+.six h2 {
+    margin-bottom: 10px;
+}
+
+.six p {
+    color: var(--p-color);
+    margin-bottom: 20px;
+}
+
+.six form ul {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 20px;
+}
+
+.six form ul li {
+    margin-bottom: 20px;
+}
+
+.six form ul li input {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+.six form ul li label {
+    font-size: 20px;
+}
+
+.six .content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(30%,1fr));
+    gap: 20px;
+    margin-top: auto;
+}
+
+.six .content .row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border: 2px solid #eee;
+    border-radius: 8px;
+}
+.six .content .row:hover {
+    color: #0075ff;
+    border: 3px solid #0075ff;
+}
+.six .content .row i {
+    margin: 20px 0;
+    font-size: 25px;
+}
+
+.six .content .row span {
+    text-transform: capitalize;
+}
+
+/* end six */
